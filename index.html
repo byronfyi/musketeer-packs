@@ -24,16 +24,14 @@
 
             <img src="./images/francis-lowry.png" alt="Francis Lowry" width="490" height="301" class="car">
 
-            <div class="text">
-                <p>Lorem ipsum dolor sit Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam</p>
+            <p class="text">Lorem ipsum dolor sit Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam</p>
 
-                <ul>
-                    <li><a href="#" class="btn" target="_blank">Square</a></li>
-                    <li><a href="#" class="btn" target="_blank">Story</a></li>
-                    <li><a href="#" class="btn" target="_blank">Landscape</a></li>
-                    <li><a href="#" class="btn" target="_blank">Png</a></li>
-                </ul>
-            </div>
+            <ul class="links">
+                <li><a href="#" class="btn" target="_blank">Square</a></li>
+                <li><a href="#" class="btn" target="_blank">Story</a></li>
+                <li><a href="#" class="btn" target="_blank">Landscape</a></li>
+                <li><a href="#" class="btn" target="_blank">Png</a></li>
+            </ul>
         </div>
     </div>
 
@@ -65,11 +63,19 @@
         });
 
         gsap.from(".text", {
-            y: 40,
+            y: -30,
             duration: 0.75,
             delay: 1,
             opacity: 0,
-            ease: 'back',
+            ease: 'back'
+        });
+
+        gsap.from(".links", {
+            y: -30,
+            duration: 0.75,
+            delay: 1.25,
+            opacity: 0,
+            ease: 'back'
         });
     </script>
     
