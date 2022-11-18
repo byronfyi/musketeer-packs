@@ -6,11 +6,11 @@
     <title>Musketeer Packs</title>
     <meta name="description" content="Musketeer Packs">
 
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0056a1">
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
+    <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#0056a1">
     <meta name="msapplication-TileColor" content="#0056a1">
     <meta name="theme-color" content="#ffffff">
 
@@ -36,47 +36,21 @@
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/Flip.min.js"></script>
     <script>
-        gsap.from(".first", {
-            x: -100,
-            duration: 0.5,
-            opacity: 0,
-            ease: 'back'
+        const timeline = gsap.timeline({
+            defaults: {
+                duration: 0.5,
+                opacity: 0,
+                ease: 'back'
+            }
         });
 
-        gsap.from(".second", {
-            x: 100,
-            duration: 0.5,
-            opacity: 0,
-            ease: 'back'
-        });
-
-        gsap.from(".car", {
-            x: 200,
-            y: -20,
-            duration: 0.75,
-            delay: 0.5,
-            opacity: 0,
-            ease: 'power',
-            type: 'inOut'
-        });
-
-        gsap.from(".text", {
-            y: -30,
-            duration: 0.75,
-            delay: 1,
-            opacity: 0,
-            ease: 'back'
-        });
-
-        gsap.from(".links", {
-            y: -30,
-            duration: 0.75,
-            delay: 1.25,
-            opacity: 0,
-            ease: 'back'
-        });
+        timeline
+            .from('.first', { x: -100 })
+            .from('.second', { x: 100 }, '<')
+            .from('.car', { x: 200, y: -20, duration: 0.75, ease: 'power', type: 'inOut' })
+            .from('.text', { y: -30, duration: 0.25 })
+            .from('.links', { y: -30, duration: 0.25 })
     </script>
     
 </body>
